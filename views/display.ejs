@@ -1,0 +1,24 @@
+<%= mydata.length %> Records Found
+<table border="1">
+<tr>
+    <th>id</th>
+    <th>name</th>
+    <th>mobile</th>
+    <th>email</th>
+    <th>password</th>
+</tr>
+    <%  for(var i=0;i<mydata.length;i++){%>
+<tr>
+    <td><%= i+1%></td>
+<td><%= mydata[i].name %></td>
+<td><%= mydata[i].mobile %></td>
+<td><%= mydata[i].email %></td>
+<td><%= mydata[i].password %></td>
+<td>
+    <a href="/show/<%= mydata[i]._id%>">show</a>
+    <a href="/delete/<%= mydata[i]._id%>">delete</a>
+    <a href="/edit/<%= mydata[i]._id%>">edit</a>
+</td>
+</tr>
+<% } %>
+</table>
